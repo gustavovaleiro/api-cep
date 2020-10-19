@@ -1,4 +1,4 @@
-package br.com.cep.model;
+package br.com.cep.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,7 +22,7 @@ public class Cep {
 	@Column(name = "BAIRRO",  length = 50)
 	private String bairro;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "IBGE", nullable = false)
 	private Cidade cidade;
 

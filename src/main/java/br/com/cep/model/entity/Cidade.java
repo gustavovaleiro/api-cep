@@ -1,4 +1,4 @@
-package br.com.cep.model;
+package br.com.cep.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
