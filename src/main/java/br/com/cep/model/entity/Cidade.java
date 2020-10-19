@@ -23,7 +23,7 @@ public class Cidade {
   private String uf;
   @Column(length = 100, nullable = false)
   private String localidade;
-  @OneToOne(mappedBy = "cidade")
+  @OneToMany(mappedBy = "cidade")
   private List<Cep> ceps; 
   
 }

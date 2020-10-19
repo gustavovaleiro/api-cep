@@ -9,11 +9,11 @@ import org.springframework.web.client.RestTemplate;
 public class ViaCepService {
     @Value("${external.viacep.url}")
     private String viaCepUrl;
-    @Value("${external.viacep.url}")
+    @Value("${external.viacep.format}")
     private String viaCepResponseType;
 
     public ViaCepResponse findCep(String cep){
-        String endereco = this.viaCepUrl + this.viaCepResponseType;
+        String endereco = this.viaCepUrl +cep +this.viaCepResponseType;
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(endereco, ViaCepResponse.class);
     }
