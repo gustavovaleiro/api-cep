@@ -23,7 +23,7 @@ public class CepService {
     private final CepMapper cepMapper;
 
     @Transactional
-    public Cep findCep(String cep){
+    public Cep findByCep(String cep){
         if(isInvalidCep(cep)){
             throw new BadRequest("O cep " +  cep + " está em formato invalido");
         }
