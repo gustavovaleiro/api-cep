@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  postgres:
+    image: postgres
+    container_name: pg-cep
+    ports:
+      - 33060:3306
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: dbcep
+      PGPORT: 3306
